@@ -16,7 +16,16 @@ function App() {
         <h2 className="section-title">Islands</h2>
         <ul className="cards">
           
-          <Card />
+          {data.islands.map(island => 
+            <Card 
+              name={island.name} 
+              info={island.description} 
+              img={island.image}
+              lat={island.coords.lat}
+              lon={island.coords.lon}
+              site={island.wiki}
+            />
+          )}
           
         </ul>
       </div>
